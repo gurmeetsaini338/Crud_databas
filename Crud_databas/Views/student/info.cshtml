@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "student";
+}
+
+
+@model List<Crud_databas.DB_Context.Login>
+ 
+    <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.Password</td>
+
+            </tr>
+
+        }
+    </table>
